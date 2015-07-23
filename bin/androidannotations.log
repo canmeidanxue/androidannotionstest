@@ -1,0 +1,200 @@
+14:41:01.349 [Worker-44] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.2 with options {phase=BUILD}
+14:41:01.351 [Worker-44] INFO  o.a.AndroidAnnotationProcessor:108 - Start processing for 8 annotations on 10 elements
+14:41:01.370 [Worker-44] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder D:\wxf\d\android\adt-bundle-windows-x86-20140321\work\androidannotions.examle: D:\wxf\d\android\adt-bundle-windows-x86-20140321\work\androidannotions.examle\AndroidManifest.xml
+14:41:01.371 [Worker-44] INFO  o.a.AndroidAnnotationProcessor:171 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.androidannotions.examle, componentQualifiedNames=[com.example.androidannotions.examle.MainActivity_, com.example.androidannotions.examle.SecondActivity_], permissionQualifiedNames=[], applicationClassName=null, libraryProject=false, debugabble=false, minSdkVersion=8, maxSdkVersion=-1, targetSdkVersion=19]
+14:41:01.372 [Worker-44] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: com.example.androidannotions.examle.R
+14:41:01.375 [Worker-44] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+14:41:01.379 [Worker-44] INFO  o.a.p.ModelValidator:42 - Validating elements
+14:41:01.380 [Worker-44] DEBUG o.a.p.ModelValidator:62 - Validating with EActivityHandler: [com.example.androidannotions.examle.MainActivity, com.example.androidannotions.examle.SecondActivity]
+14:41:01.381 [Worker-44] DEBUG o.a.p.ModelValidator:62 - Validating with EFragmentHandler: [com.example.androidannotions.examle.fragment.TestFragment]
+14:41:01.381 [Worker-44] DEBUG o.a.p.ModelValidator:62 - Validating with EBeanHandler: [com.example.androidannotions.examle.bean.Singleton, com.example.androidannotions.examle.bean.WarThree, com.example.androidannotions.examle.inf.MyImplementation]
+14:41:01.382 [Worker-44] DEBUG o.a.p.ModelValidator:62 - Validating with EViewHandler: [com.example.androidannotions.examle.view.CustomButton]
+14:41:01.382 [Worker-44] DEBUG o.a.p.ModelValidator:62 - Validating with ViewByIdHandler: [button]
+14:41:01.383 [Worker-44] DEBUG o.a.p.ModelValidator:62 - Validating with ClickHandler: [public void startActivity() ]
+14:41:01.383 [Worker-44] DEBUG o.a.p.ModelValidator:62 - Validating with RootContextHanlder: [context, service, activity]
+14:41:01.384 [Worker-44] DEBUG o.a.p.ModelValidator:62 - Validating with BeanHandler: [myInterface, warThree]
+14:41:01.384 [Worker-44] INFO  o.a.p.ModelProcessor:69 - Processing root elements
+14:41:01.385 [Worker-44] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EActivityHandler: [com.example.androidannotions.examle.MainActivity, com.example.androidannotions.examle.SecondActivity]
+14:41:01.387 [Worker-44] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EFragmentHandler: [com.example.androidannotions.examle.fragment.TestFragment]
+14:41:01.388 [Worker-44] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EBeanHandler: [com.example.androidannotions.examle.bean.Singleton, com.example.androidannotions.examle.bean.WarThree, com.example.androidannotions.examle.inf.MyImplementation]
+14:41:01.565 [Worker-44] ERROR o.a.AndroidAnnotationProcessor:268 - Something went wrong: Unexpected error in AndroidAnnotations 3.2!
+You should check if there is already an issue about it on https://github.com/excilys/androidannotations/search?q=java.lang.IndexOutOfBoundsException&type=Issues
+If none exists, please open a new one with the following content and tell us if you can reproduce it or not. Don't forget to give us as much information as you can (like parts of your code in failure).
+Java version: javac 1.6.0_38
+Javac processors options: phase=BUILD
+Stacktrace: java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.RangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at org.androidannotations.holder.EBeanHolder.setConstructor(EBeanHolder.java:55)
+	at org.androidannotations.holder.EBeanHolder.<init>(EBeanHolder.java:47)
+	at org.androidannotations.handler.EBeanHandler.createGeneratedClassHolder(EBeanHandler.java:36)
+	at org.androidannotations.handler.EBeanHandler.createGeneratedClassHolder(EBeanHandler.java:28)
+	at org.androidannotations.process.ModelProcessor.generateElements(ModelProcessor.java:177)
+	at org.androidannotations.process.ModelProcessor.process(ModelProcessor.java:75)
+	at org.androidannotations.AndroidAnnotationProcessor.processAnnotations(AndroidAnnotationProcessor.java:243)
+	at org.androidannotations.AndroidAnnotationProcessor.processThrowing(AndroidAnnotationProcessor.java:185)
+	at org.androidannotations.AndroidAnnotationProcessor.process(AndroidAnnotationProcessor.java:113)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.RoundDispatcher.handleProcessor(RoundDispatcher.java:139)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.RoundDispatcher.round(RoundDispatcher.java:121)
+	at org.eclipse.jdt.internal.compiler.apt.dispatch.BaseAnnotationProcessorManager.processAnnotations(BaseAnnotationProcessorManager.java:159)
+	at org.eclipse.jdt.internal.apt.pluggable.core.dispatch.IdeAnnotationProcessorManager.processAnnotations(IdeAnnotationProcessorManager.java:134)
+	at org.eclipse.jdt.internal.compiler.Compiler.processAnnotations(Compiler.java:820)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:434)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:366)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.compile(BatchImageBuilder.java:178)
+	at org.eclipse.jdt.internal.core.builder.AbstractImageBuilder.compile(AbstractImageBuilder.java:303)
+	at org.eclipse.jdt.internal.core.builder.BatchImageBuilder.build(BatchImageBuilder.java:60)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.buildAll(JavaBuilder.java:254)
+	at org.eclipse.jdt.internal.core.builder.JavaBuilder.build(JavaBuilder.java:173)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:733)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:302)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:358)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:381)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:514)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:433)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:305)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:38)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+14:41:01.565 [Worker-44] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 214 ms], [Extract Annotations = 19 ms], [Find R Classes = 7 ms], [Validate Annotations = 5 ms], [Extract Manifest = 1 ms], 
+14:41:01.566 [Worker-44] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
+14:43:20.637 [Worker-44] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.2 with options {phase=BUILD}
+14:43:20.638 [Worker-44] INFO  o.a.AndroidAnnotationProcessor:108 - Start processing for 4 annotations on 1 elements
+14:43:20.651 [Worker-44] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder D:\wxf\d\android\adt-bundle-windows-x86-20140321\work\androidannotions.examle: D:\wxf\d\android\adt-bundle-windows-x86-20140321\work\androidannotions.examle\AndroidManifest.xml
+14:43:20.653 [Worker-44] INFO  o.a.AndroidAnnotationProcessor:171 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.androidannotions.examle, componentQualifiedNames=[com.example.androidannotions.examle.MainActivity_, com.example.androidannotions.examle.SecondActivity_], permissionQualifiedNames=[], applicationClassName=null, libraryProject=false, debugabble=false, minSdkVersion=8, maxSdkVersion=-1, targetSdkVersion=19]
+14:43:20.653 [Worker-44] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: com.example.androidannotions.examle.R
+14:43:20.656 [Worker-44] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+14:43:20.661 [Worker-44] INFO  o.a.p.ModelValidator:42 - Validating elements
+14:43:20.662 [Worker-44] DEBUG o.a.p.ModelValidator:62 - Validating with EActivityHandler: [com.example.androidannotions.examle.MainActivity]
+14:43:20.662 [Worker-44] DEBUG o.a.p.ModelValidator:62 - Validating with ViewByIdHandler: [button]
+14:43:20.664 [Worker-44] DEBUG o.a.p.ModelValidator:62 - Validating with ClickHandler: [public void startActivity() ]
+14:43:20.665 [Worker-44] DEBUG o.a.p.ModelValidator:62 - Validating with BeanHandler: [myInterface, warThree]
+14:43:20.666 [Worker-44] INFO  o.a.p.ModelProcessor:69 - Processing root elements
+14:43:20.666 [Worker-44] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EActivityHandler: [com.example.androidannotions.examle.MainActivity]
+14:43:20.668 [Worker-44] INFO  o.a.p.ModelProcessor:77 - Processing enclosed elements
+14:43:20.669 [Worker-44] INFO  o.a.AndroidAnnotationProcessor:250 - Number of files generated by AndroidAnnotations: 1
+14:43:20.669 [Worker-44] INFO  o.a.g.ApiCodeGenerator:52 - Writting following API classes in project: []
+14:43:20.670 [Worker-44] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.androidannotions.examle.MainActivity_
+14:43:20.673 [Worker-44] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 35 ms], [Extract Annotations = 12 ms], [Find R Classes = 8 ms], [Validate Annotations = 5 ms], [Generate Sources = 4 ms], [Process Annotations = 3 ms], [Extract Manifest = 2 ms], 
+14:43:20.674 [Worker-44] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
+14:43:51.801 [Worker-44] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.2 with options {phase=BUILD}
+14:43:51.802 [Worker-44] INFO  o.a.AndroidAnnotationProcessor:108 - Start processing for 4 annotations on 1 elements
+14:43:51.814 [Worker-44] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder D:\wxf\d\android\adt-bundle-windows-x86-20140321\work\androidannotions.examle: D:\wxf\d\android\adt-bundle-windows-x86-20140321\work\androidannotions.examle\AndroidManifest.xml
+14:43:51.815 [Worker-44] INFO  o.a.AndroidAnnotationProcessor:171 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.androidannotions.examle, componentQualifiedNames=[com.example.androidannotions.examle.MainActivity_, com.example.androidannotions.examle.SecondActivity_], permissionQualifiedNames=[], applicationClassName=null, libraryProject=false, debugabble=false, minSdkVersion=8, maxSdkVersion=-1, targetSdkVersion=19]
+14:43:51.816 [Worker-44] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: com.example.androidannotions.examle.R
+14:43:51.818 [Worker-44] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+14:43:51.823 [Worker-44] INFO  o.a.p.ModelValidator:42 - Validating elements
+14:43:51.823 [Worker-44] DEBUG o.a.p.ModelValidator:62 - Validating with EActivityHandler: [com.example.androidannotions.examle.MainActivity]
+14:43:51.824 [Worker-44] DEBUG o.a.p.ModelValidator:62 - Validating with ViewByIdHandler: [button]
+14:43:51.825 [Worker-44] DEBUG o.a.p.ModelValidator:62 - Validating with ClickHandler: [public void startActivity() ]
+14:43:51.826 [Worker-44] DEBUG o.a.p.ModelValidator:62 - Validating with BeanHandler: [warThree, myInterface]
+14:43:51.827 [Worker-44] INFO  o.a.p.ModelProcessor:69 - Processing root elements
+14:43:51.827 [Worker-44] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EActivityHandler: [com.example.androidannotions.examle.MainActivity]
+14:43:51.829 [Worker-44] INFO  o.a.p.ModelProcessor:77 - Processing enclosed elements
+14:43:51.830 [Worker-44] INFO  o.a.AndroidAnnotationProcessor:250 - Number of files generated by AndroidAnnotations: 1
+14:43:51.831 [Worker-44] INFO  o.a.g.ApiCodeGenerator:52 - Writting following API classes in project: []
+14:43:51.831 [Worker-44] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.androidannotions.examle.MainActivity_
+14:43:51.952 [Worker-44] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 150 ms], [Generate Sources = 122 ms], [Extract Annotations = 11 ms], [Find R Classes = 6 ms], [Validate Annotations = 4 ms], [Process Annotations = 3 ms], [Extract Manifest = 2 ms], 
+14:43:51.952 [Worker-44] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
+14:45:17.133 [Worker-45] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.2 with options {phase=BUILD}
+14:46:34.690 [Worker-42] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.2 with options {phase=BUILD}
+14:46:34.691 [Worker-42] INFO  o.a.AndroidAnnotationProcessor:108 - Start processing for 4 annotations on 2 elements
+14:46:34.708 [Worker-42] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder D:\wxf\d\android\adt-bundle-windows-x86-20140321\work\androidannotions.examle: D:\wxf\d\android\adt-bundle-windows-x86-20140321\work\androidannotions.examle\AndroidManifest.xml
+14:46:34.709 [Worker-42] INFO  o.a.AndroidAnnotationProcessor:171 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.androidannotions.examle, componentQualifiedNames=[com.example.androidannotions.examle.MainActivity_, com.example.androidannotions.examle.SecondActivity_], permissionQualifiedNames=[], applicationClassName=null, libraryProject=false, debugabble=false, minSdkVersion=8, maxSdkVersion=-1, targetSdkVersion=19]
+14:46:34.710 [Worker-42] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: com.example.androidannotions.examle.R
+14:46:34.712 [Worker-42] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+14:46:34.717 [Worker-42] INFO  o.a.p.ModelValidator:42 - Validating elements
+14:46:34.718 [Worker-42] DEBUG o.a.p.ModelValidator:62 - Validating with EActivityHandler: [com.example.androidannotions.examle.MainActivity]
+14:46:34.718 [Worker-42] DEBUG o.a.p.ModelValidator:62 - Validating with EFragmentHandler: [com.example.androidannotions.examle.fragment.TestFragment]
+14:46:34.719 [Worker-42] DEBUG o.a.p.ModelValidator:62 - Validating with ViewByIdHandler: [button]
+14:46:34.721 [Worker-42] DEBUG o.a.p.ModelValidator:62 - Validating with ClickHandler: [public void startActivity() ]
+14:46:34.721 [Worker-42] INFO  o.a.p.ModelProcessor:69 - Processing root elements
+14:46:34.722 [Worker-42] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EActivityHandler: [com.example.androidannotions.examle.MainActivity]
+14:46:34.723 [Worker-42] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EFragmentHandler: [com.example.androidannotions.examle.fragment.TestFragment]
+14:46:34.724 [Worker-42] INFO  o.a.p.ModelProcessor:77 - Processing enclosed elements
+14:46:34.725 [Worker-42] INFO  o.a.AndroidAnnotationProcessor:250 - Number of files generated by AndroidAnnotations: 2
+14:46:34.725 [Worker-42] INFO  o.a.g.ApiCodeGenerator:52 - Writting following API classes in project: []
+14:46:34.726 [Worker-42] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.androidannotions.examle.MainActivity_
+14:46:34.732 [Worker-42] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.androidannotions.examle.fragment.TestFragment_
+14:46:34.735 [Worker-42] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 44 ms], [Extract Annotations = 15 ms], [Generate Sources = 10 ms], [Find R Classes = 7 ms], [Validate Annotations = 4 ms], [Process Annotations = 4 ms], [Extract Manifest = 2 ms], 
+14:46:34.736 [Worker-42] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
+14:46:55.615 [Worker-40] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.2 with options {phase=BUILD}
+14:46:55.616 [Worker-40] INFO  o.a.AndroidAnnotationProcessor:108 - Start processing for 3 annotations on 1 elements
+14:46:55.627 [Worker-40] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder D:\wxf\d\android\adt-bundle-windows-x86-20140321\work\androidannotions.examle: D:\wxf\d\android\adt-bundle-windows-x86-20140321\work\androidannotions.examle\AndroidManifest.xml
+14:46:55.629 [Worker-40] INFO  o.a.AndroidAnnotationProcessor:171 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.androidannotions.examle, componentQualifiedNames=[com.example.androidannotions.examle.MainActivity_, com.example.androidannotions.examle.SecondActivity_], permissionQualifiedNames=[], applicationClassName=null, libraryProject=false, debugabble=false, minSdkVersion=8, maxSdkVersion=-1, targetSdkVersion=19]
+14:46:55.630 [Worker-40] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: com.example.androidannotions.examle.R
+14:46:55.632 [Worker-40] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+14:46:55.637 [Worker-40] INFO  o.a.p.ModelValidator:42 - Validating elements
+14:46:55.638 [Worker-40] DEBUG o.a.p.ModelValidator:62 - Validating with EActivityHandler: [com.example.androidannotions.examle.MainActivity]
+14:46:55.638 [Worker-40] DEBUG o.a.p.ModelValidator:62 - Validating with ViewByIdHandler: [button]
+14:46:55.640 [Worker-40] DEBUG o.a.p.ModelValidator:62 - Validating with ClickHandler: [public void startActivity() ]
+14:46:55.641 [Worker-40] INFO  o.a.p.ModelProcessor:69 - Processing root elements
+14:46:55.642 [Worker-40] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EActivityHandler: [com.example.androidannotions.examle.MainActivity]
+14:46:55.644 [Worker-40] INFO  o.a.p.ModelProcessor:77 - Processing enclosed elements
+14:46:55.645 [Worker-40] INFO  o.a.AndroidAnnotationProcessor:250 - Number of files generated by AndroidAnnotations: 1
+14:46:55.646 [Worker-40] INFO  o.a.g.ApiCodeGenerator:52 - Writting following API classes in project: []
+14:46:55.646 [Worker-40] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.androidannotions.examle.MainActivity_
+14:46:55.648 [Worker-40] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 32 ms], [Extract Annotations = 10 ms], [Find R Classes = 8 ms], [Validate Annotations = 4 ms], [Process Annotations = 4 ms], [Generate Sources = 3 ms], [Extract Manifest = 2 ms], 
+14:46:55.649 [Worker-40] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
+14:47:42.108 [Worker-43] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.2 with options {phase=BUILD}
+14:47:42.109 [Worker-43] INFO  o.a.AndroidAnnotationProcessor:108 - Start processing for 4 annotations on 4 elements
+14:47:42.124 [Worker-43] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder D:\wxf\d\android\adt-bundle-windows-x86-20140321\work\androidannotions.examle: D:\wxf\d\android\adt-bundle-windows-x86-20140321\work\androidannotions.examle\AndroidManifest.xml
+14:47:42.125 [Worker-43] INFO  o.a.AndroidAnnotationProcessor:171 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.androidannotions.examle, componentQualifiedNames=[com.example.androidannotions.examle.MainActivity_, com.example.androidannotions.examle.SecondActivity_], permissionQualifiedNames=[], applicationClassName=null, libraryProject=false, debugabble=false, minSdkVersion=8, maxSdkVersion=-1, targetSdkVersion=19]
+14:47:42.126 [Worker-43] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: com.example.androidannotions.examle.R
+14:47:42.128 [Worker-43] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+14:47:42.134 [Worker-43] INFO  o.a.p.ModelValidator:42 - Validating elements
+14:47:42.134 [Worker-43] DEBUG o.a.p.ModelValidator:62 - Validating with EActivityHandler: [com.example.androidannotions.examle.MainActivity]
+14:47:42.135 [Worker-43] DEBUG o.a.p.ModelValidator:62 - Validating with EFragmentHandler: [com.example.androidannotions.examle.fragment.TestFragment]
+14:47:42.136 [Worker-43] DEBUG o.a.p.ModelValidator:62 - Validating with ViewByIdHandler: [button]
+14:47:42.137 [Worker-43] DEBUG o.a.p.ModelValidator:62 - Validating with ClickHandler: [public void startActivity() ]
+14:47:42.138 [Worker-43] INFO  o.a.p.ModelProcessor:69 - Processing root elements
+14:47:42.139 [Worker-43] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EActivityHandler: [com.example.androidannotions.examle.MainActivity]
+14:47:42.140 [Worker-43] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EFragmentHandler: [com.example.androidannotions.examle.fragment.TestFragment]
+14:47:42.141 [Worker-43] INFO  o.a.p.ModelProcessor:77 - Processing enclosed elements
+14:47:42.141 [Worker-43] DEBUG o.a.p.ModelProcessor:89 - Processing enclosed elements with ViewByIdHandler: [org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@2c8d08]
+14:47:42.142 [Worker-43] DEBUG o.a.p.ModelProcessor:89 - Processing enclosed elements with ClickHandler: [org.androidannotations.model.AnnotationElements$AnnotatedAndRootElements@121391c]
+14:47:42.143 [Worker-43] INFO  o.a.AndroidAnnotationProcessor:250 - Number of files generated by AndroidAnnotations: 2
+14:47:42.143 [Worker-43] INFO  o.a.g.ApiCodeGenerator:52 - Writting following API classes in project: []
+14:47:42.143 [Worker-43] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.androidannotions.examle.MainActivity_
+14:47:42.150 [Worker-43] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.androidannotions.examle.fragment.TestFragment_
+14:47:42.210 [Worker-43] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 101 ms], [Generate Sources = 67 ms], [Extract Annotations = 13 ms], [Find R Classes = 8 ms], [Process Annotations = 5 ms], [Validate Annotations = 4 ms], [Extract Manifest = 2 ms], 
+14:47:42.211 [Worker-43] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
+14:48:38.174 [Worker-41] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.2 with options {phase=BUILD}
+14:48:38.176 [Worker-41] INFO  o.a.AndroidAnnotationProcessor:108 - Start processing for 3 annotations on 1 elements
+14:48:38.189 [Worker-41] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder D:\wxf\d\android\adt-bundle-windows-x86-20140321\work\androidannotions.examle: D:\wxf\d\android\adt-bundle-windows-x86-20140321\work\androidannotions.examle\AndroidManifest.xml
+14:48:38.190 [Worker-41] INFO  o.a.AndroidAnnotationProcessor:171 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.androidannotions.examle, componentQualifiedNames=[com.example.androidannotions.examle.MainActivity_, com.example.androidannotions.examle.SecondActivity_], permissionQualifiedNames=[], applicationClassName=null, libraryProject=false, debugabble=false, minSdkVersion=8, maxSdkVersion=-1, targetSdkVersion=19]
+14:48:38.191 [Worker-41] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: com.example.androidannotions.examle.R
+14:48:38.193 [Worker-41] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+14:48:38.198 [Worker-41] INFO  o.a.p.ModelValidator:42 - Validating elements
+14:48:38.199 [Worker-41] DEBUG o.a.p.ModelValidator:62 - Validating with EActivityHandler: [com.example.androidannotions.examle.MainActivity]
+14:48:38.200 [Worker-41] DEBUG o.a.p.ModelValidator:62 - Validating with ViewByIdHandler: [button]
+14:48:38.202 [Worker-41] DEBUG o.a.p.ModelValidator:62 - Validating with ClickHandler: [public void startActivity() ]
+14:48:38.203 [Worker-41] INFO  o.a.p.ModelProcessor:69 - Processing root elements
+14:48:38.203 [Worker-41] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EActivityHandler: [com.example.androidannotions.examle.MainActivity]
+14:48:38.205 [Worker-41] INFO  o.a.p.ModelProcessor:77 - Processing enclosed elements
+14:48:38.206 [Worker-41] INFO  o.a.AndroidAnnotationProcessor:250 - Number of files generated by AndroidAnnotations: 1
+14:48:38.206 [Worker-41] INFO  o.a.g.ApiCodeGenerator:52 - Writting following API classes in project: []
+14:48:38.207 [Worker-41] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.androidannotions.examle.MainActivity_
+14:48:38.208 [Worker-41] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 32 ms], [Extract Annotations = 13 ms], [Find R Classes = 7 ms], [Validate Annotations = 5 ms], [Process Annotations = 3 ms], [Generate Sources = 2 ms], [Extract Manifest = 1 ms], 
+14:48:38.209 [Worker-41] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
+14:54:12.356 [Worker-47] INFO  o.a.AndroidAnnotationProcessor:84 - Initialize AndroidAnnotations 3.2 with options {phase=BUILD}
+14:54:12.357 [Worker-47] INFO  o.a.AndroidAnnotationProcessor:108 - Start processing for 1 annotations on 1 elements
+14:54:12.364 [Worker-47] DEBUG o.a.h.AndroidManifestFinder:137 - AndroidManifest.xml file found in parent folder D:\wxf\d\android\adt-bundle-windows-x86-20140321\work\androidannotions.examle: D:\wxf\d\android\adt-bundle-windows-x86-20140321\work\androidannotions.examle\AndroidManifest.xml
+14:54:12.366 [Worker-47] INFO  o.a.AndroidAnnotationProcessor:171 - AndroidManifest.xml found: AndroidManifest [applicationPackage=com.example.androidannotions.examle, componentQualifiedNames=[com.example.androidannotions.examle.MainActivity_, com.example.androidannotions.examle.SecondActivity_], permissionQualifiedNames=[], applicationClassName=null, libraryProject=false, debugabble=false, minSdkVersion=8, maxSdkVersion=-1, targetSdkVersion=19]
+14:54:12.366 [Worker-47] INFO  o.a.r.ProjectRClassFinder:50 - Found project R class: com.example.androidannotions.examle.R
+14:54:12.369 [Worker-47] INFO  o.a.r.AndroidRClassFinder:44 - Found Android class: android.R
+14:54:12.373 [Worker-47] INFO  o.a.p.ModelValidator:42 - Validating elements
+14:54:12.374 [Worker-47] DEBUG o.a.p.ModelValidator:62 - Validating with EFragmentHandler: [com.example.androidannotions.examle.fragment.TestFragment]
+14:54:12.374 [Worker-47] INFO  o.a.p.ModelProcessor:69 - Processing root elements
+14:54:12.375 [Worker-47] DEBUG o.a.p.ModelProcessor:160 - Processing root elements EFragmentHandler: [com.example.androidannotions.examle.fragment.TestFragment]
+14:54:12.375 [Worker-47] INFO  o.a.p.ModelProcessor:77 - Processing enclosed elements
+14:54:12.376 [Worker-47] INFO  o.a.AndroidAnnotationProcessor:250 - Number of files generated by AndroidAnnotations: 1
+14:54:12.376 [Worker-47] INFO  o.a.g.ApiCodeGenerator:52 - Writting following API classes in project: []
+14:54:12.376 [Worker-47] DEBUG o.a.g.SourceCodewriter:55 - Generating class: com.example.androidannotions.examle.fragment.TestFragment_
+14:54:12.378 [Worker-47] INFO  o.a.p.TimeStats:81 - Time measurements: [Whole Processing = 21 ms], [Extract Annotations = 7 ms], [Find R Classes = 7 ms], [Extract Manifest = 2 ms], [Process Annotations = 2 ms], [Generate Sources = 2 ms], [Validate Annotations = 1 ms], 
+14:54:12.378 [Worker-47] INFO  o.a.AndroidAnnotationProcessor:122 - Finish processing
